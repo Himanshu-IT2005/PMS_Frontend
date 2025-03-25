@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Collaboration - Project Management System</title>
+    <style>
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to bottom, #f8fafc, #e0f2fe);
+            color: #1e293b;
+            min-height: 100vh;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1d4ed8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #1d4ed8;
+        }
+
+        /* Main content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 4rem;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        /* Features grid */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-box h2 {
+            font-size: 1.5rem;
+            color: #fbbf24;
+            margin-bottom: 1rem;
+        }
+
+        .feature-box p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 6rem 1rem 2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">PROJECT MANAGEMENT</div>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="feature.html">Features</a>
+                <a href="request_demo.html">Demo</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Enhance Your Team Collaboration</h1>
+        <p class="subtitle">Work seamlessly with your team through real-time collaboration features</p>
+        
+        <div class="features">
+            <div class="feature-box">
+                <h2>Real-time Chat</h2>
+                <p>Communicate instantly with team members through integrated messaging. Share updates, discuss tasks, and resolve queries in real-time.</p>
+            </div>
+            
+            <div class="feature-box">
+                <h2>File Sharing</h2>
+                <p>Share documents, presentations, and media files securely. Keep all project resources organized and accessible to team members.</p>
+            </div>
+            
+            <div class="feature-box">
+                <h2>Task Management</h2>
+                <p>Create, assign, and track tasks efficiently. Set priorities, deadlines, and monitor progress with our intuitive interface.</p>
+            </div>
+            
+            <div class="feature-box">
+                <h2>Progress Tracking</h2>
+                <p>Monitor team progress with real-time updates. Get insights into task completion and project milestones.</p>
+            </div>
+            
+            <div class="feature-box">
+                <h2>Team Calendar</h2>
+                <p>Coordinate schedules and deadlines with a shared team calendar. Never miss important meetings or milestones.</p>
+            </div>
+            
+            <div class="feature-box">
+                <h2>Document Collaboration</h2>
+                <p>Work together on documents in real-time. Track changes, add comments, and maintain version control.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

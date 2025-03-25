@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - Project Management System</title>
+    <style>
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to bottom, #f8fafc, #e0f2fe);
+            color: #1e293b;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1d4ed8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #1d4ed8;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 8rem 2rem 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .features-header h1 {
+            font-size: 3rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .features-header p {
+            font-size: 1.25rem;
+            color: #475569;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: #475569;
+            font-size: 1.125rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .features-header h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .features {
+                padding: 6rem 1rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-header">
+            <h1>Key Features of Our Project Management System</h1>
+            <p>Designed to streamline your workflow and boost productivity</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Dashboard">
+                <h3>Interactive Dashboard</h3>
+                <p>Get a real-time overview of all your projects, tasks, and team activities with our intuitive dashboard.</p>
+            </div>
+
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=800" alt="Task Management">
+                <h3>Task Management</h3>
+                <p>Assign, track, and manage tasks efficiently with deadlines and priorities using our comprehensive task management system.</p>
+            </div>
+
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Team Collaboration">
+                <h3>Team Collaboration</h3>
+                <p>Communicate with your team members and collaborate on tasks in real-time with integrated chat and file sharing.</p>
+            </div>
+
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=800" alt="Role-Based Access">
+                <h3>Role-Based Access</h3>
+                <p>Manage user roles with controlled access levels for different team members and project stakeholders.</p>
+            </div>
+
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Project Timeline">
+                <h3>Project Timeline & Reports</h3>
+                <p>Monitor project progress and generate insightful reports for better decision-making and resource allocation.</p>
+            </div>
+
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&q=80&w=800" alt="Secure Authentication">
+                <h3>Secure Authentication</h3>
+                <p>Ensure data security with email verification and encrypted user authentication protocols.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
